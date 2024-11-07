@@ -1,41 +1,98 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Reset de margens e fonte padrão */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.login-container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: #00ffcc;
+}
+
+.level {
+    margin-bottom: 2rem;
+}
+
+#code-example {
+    background: #333;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #00ffcc;
+    margin-top: 1rem;
+    text-align: left;
 }
 
 input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    max-width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #00ffcc;
+    background-color: #222;
+    color: #00ff00;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
     border: none;
-    border-radius: 4px;
+    color: #121212;
+    background-color: #00ffcc;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #00e6b8;
+}
+
+#feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para a barra de progresso */
+.progress-bar {
+    position: fixed; /* Fixa na lateral */
+    top: 10%; /* Posiciona um pouco abaixo do topo */
+    right: 10px; /* Fixa à direita da tela */
+    width: 40px;
+    height: 250px; /* Metade da altura original */
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    margin-top: 2rem;
+    z-index: 1000; /* Garante que ficará sobre outros elementos */
+}
+
+.progress-level {
+    width: 100%;
+    height: 15px; /* Cada subnível da barra será mais fino */
+    border-bottom: 1px solid #00ffcc;
+    background-color: #121212;
+    position: relative;
+}
+
+.progress-level.filled {
+    background-color: #00ffcc;
 }

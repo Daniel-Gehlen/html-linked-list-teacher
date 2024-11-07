@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprender Listas Encadeadas</title>
+    <title>Learn Linked Lists</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo, Test</h1>
-        <h2>Vamos aprender sobre Listas Encadeadas!</h2>
-
-        <div class="level">
-            <h3>Nível 1: Criar um nó simples</h3>
-            <p>Seu objetivo é criar um nó que armazene um valor e tenha uma referência para o próximo nó.</p>
-
-            <p><strong>Instruções:</strong> Para criar um nó, você precisa usar um objeto com duas propriedades principais:</p>
-            <ul>
-                <li><code>value</code>: Esta propriedade armazenará o valor do nó.</li>
-                <li><code>next</code>: Esta propriedade apontará para o próximo nó na lista ou será <code>null</code> se não houver próximo nó.</li>
-            </ul>
-
-            <p><strong>Exemplo de código:</strong></p>
-            <pre><code>let node = { value: 1, next: null };</code></pre>
-
-            <p>Agora, tente criar seu próprio nó! Digite o código abaixo e clique em "Enviar Código" para validar.</p>
-
-            <textarea id="code-input" rows="5" placeholder="Digite seu código aqui..."></textarea>
-            <button id="submit-code">Enviar Código</button>
-
+        <h1>Welcome, <span id="username-display">Student</span></h1>
+        <p>Let’s Learn Linked Lists!</p>
+        
+        <div id="level-1" class="level">
+            <h2>Level 1: Create a simple node with <code>value</code> and <code>next</code> properties.</h2>
+            <p>Type the following code:</p>
+            <pre id="code-example">let node = { value: 1, next: null };</pre>
+            <input id="code-input" placeholder="Type your code here" />
+            <button id="submit-code">Submit Code</button>
             <div id="feedback"></div>
         </div>
+
+        <div id="level-2" class="level">
+            <h2>Level 2: Add another node and link them.</h2>
+            <p>Create a second node and link the first node’s <code>next</code> to this new node.</p>
+            <pre id="code-example">let node2 = { value: 2, next: null }; node.next = node2;</pre>
+            <input id="code-input-level-2" placeholder="Type your code here" />
+            <button id="submit-code-level-2">Submit Code</button>
+            <div id="feedback-level-2"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-level" id="level-1">1</div>
+            <div class="progress-level" id="level-2">2</div>
+            <div class="progress-level" id="level-3">3</div>
+            <div class="progress-level" id="level-4">4</div>
+            <div class="progress-level" id="level-5">5</div>
+            <div class="progress-level" id="level-6">6</div>
+            <div class="progress-level" id="level-7">7</div>
+            <div class="progress-level" id="level-8">8</div>
+            <div class="progress-level" id="level-9">9</div>
+            <div class="progress-level" id="level-10">10</div>
+            <div class="progress-level" id="level-11">11</div>
+            <div class="progress-level" id="level-12">12</div>
+            <div class="progress-level" id="level-13">13</div>
+            <div class="progress-level" id="level-14">14</div>
+        </div>        
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
