@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Linked Lists</title>
+    <title>Learn Queue Implementation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Welcome, <span id="username-display">Student</span></h1>
-        <p>Let’s Learn Linked Lists!</p>
-        
+        <p>Let’s Learn Queues!</p>
+
+        <!-- Nível 1: Definir a classe Queue -->
         <div id="level-1" class="level">
-            <h2>Level 1: Create a simple node with <code>value</code> and <code>next</code> properties.</h2>
+            <h2>Level 1: Define the Queue class</h2>
             <p>Type the following code:</p>
-            <pre id="code-example">let node = { value: 1, next: null };</pre>
-            <input id="code-input" placeholder="Type your code here" />
-            <button id="submit-code">Submit Code</button>
-            <div id="feedback"></div>
+            <pre id="code-example">class Queue { constructor() { this.first = null; this.last = null; this.size = 0; } }</pre>
+            <textarea id="code-input-1" placeholder="Type your code here"></textarea>
+            <button id="submit-code-1">Submit Code</button>
+            <div id="feedback-1"></div>
         </div>
 
-        <div id="level-2" class="level">
-            <h2>Level 2: Add another node and link them.</h2>
-            <p>Create a second node and link the first node’s <code>next</code> to this new node.</p>
-            <pre id="code-example">let node2 = { value: 2, next: null }; node.next = node2;</pre>
-            <input id="code-input-level-2" placeholder="Type your code here" />
-            <button id="submit-code-level-2">Submit Code</button>
-            <div id="feedback-level-2"></div>
+        <!-- Nível 2: Definir o método enqueue -->
+        <div id="level-2" class="level hidden">
+            <h2>Level 2: Implement the enqueue method</h2>
+            <p>Define the <code>enqueue</code> method to add nodes to the end of the queue:</p>
+            <pre id="code-example">enqueue(value) { const newNode = { value: value, next: null }; if (this.isEmpty()) { this.first = newNode; this.last = newNode; } else { this.last.next = newNode; this.last = newNode; } this.size++; return this; }</pre>
+            <textarea id="code-input-2" placeholder="Type your code here"></textarea>
+            <button id="submit-code-2">Submit Code</button>
+            <div id="feedback-2"></div>
         </div>
+
+        <!-- Nível 3: Definir o método dequeue -->
+        <div id="level-3" class="level hidden">
+            <h2>Level 3: Implement the dequeue method</h2>
+            <p>Define the <code>dequeue</code> method to remove nodes from the front of the queue:</p>
+            <pre id="code-example">dequeue() { if (this.isEmpty()) return null; const removedNode = this.first; this.first = this.first.next; if (this.first === null) { this.last = null; } this.size--; return removedNode.value; }</pre>
+            <textarea id="code-input-3" placeholder="Type your code here"></textarea>
+            <button id="submit-code-3">Submit Code</button>
+            <div id="feedback-3"></div>
+        </div>
+
+        <!-- Nível 4: Definir o método isEmpty -->
+        <div id="level-4" class="level hidden">
+            <h2>Level 4: Implement the isEmpty method</h2>
+            <p>Define the <code>isEmpty</code> method to check if the queue is empty:</p>
+            <pre id="code-example">isEmpty() { return this.size === 0; }</pre>
+            <textarea id="code-input-4" placeholder="Type your code here"></textarea>
+            <button id="submit-code-4">Submit Code</button>
+            <div id="feedback-4"></div>
+        </div>
+
+        <!-- Nível 5: Testar enfileiramento -->
+        <div id="level-5" class="level hidden">
+            <h2>Level 5: Test enqueue by adding values to the queue</h2>
+            <p>Try adding values to the queue with <code>enqueue</code>:</p>
+            <pre id="code-example">const fila = new Queue(); fila.enqueue(10); fila.enqueue(20); fila.enqueue(30);</pre>
+            <textarea id="code-input-5" placeholder="Type your code here"></textarea>
+            <button id="submit-code-5">Submit Code</button>
+            <div id="feedback-5"></div>
+        </div>
+
+        <!-- Nível 6: Testar desenfileiramento -->
+        <div id="level-6" class="level hidden">
+            <h2>Level 6: Test dequeue to remove items from the queue</h2>
+            <p>Try removing values from the queue using <code>dequeue</code>:</p>
+            <pre id="code-example">fila.dequeue(); fila.dequeue();</pre>
+            <textarea id="code-input-6" placeholder="Type your code here"></textarea>
+            <button id="submit-code-6">Submit Code</button>
+            <div id="feedback-6"></div>
+        </div>
+
+        <!-- Barra de progresso vertical -->
         <div class="progress-bar">
-            <div class="progress-level" id="level-1">1</div>
-            <div class="progress-level" id="level-2">2</div>
-            <div class="progress-level" id="level-3">3</div>
-            <div class="progress-level" id="level-4">4</div>
-            <div class="progress-level" id="level-5">5</div>
-            <div class="progress-level" id="level-6">6</div>
-            <div class="progress-level" id="level-7">7</div>
-            <div class="progress-level" id="level-8">8</div>
-            <div class="progress-level" id="level-9">9</div>
-            <div class="progress-level" id="level-10">10</div>
-            <div class="progress-level" id="level-11">11</div>
-            <div class="progress-level" id="level-12">12</div>
-            <div class="progress-level" id="level-13">13</div>
-            <div class="progress-level" id="level-14">14</div>
-        </div>        
+            <div class="progress-level" id="level-progress-0">0</div>
+            <div class="progress-level" id="level-progress-1">1</div>
+            <div class="progress-level" id="level-progress-2">2</div>
+            <div class="progress-level" id="level-progress-3">3</div>
+            <div class="progress-level" id="level-progress-4">4</div>
+            <div class="progress-level" id="level-progress-5">5</div>
+            <div class="progress-level" id="level-progress-6">6</div>
+        </div>
     </div>
 
     <script src="app.js"></script>

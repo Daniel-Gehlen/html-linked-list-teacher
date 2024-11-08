@@ -16,6 +16,27 @@ body {
     text-align: center;
 }
 
+textarea {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #00ffcc;
+    background-color: #222;
+    color: #00ff00;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    height: auto;
+    resize: none;
+    min-height: 3rem;
+}
+
+textarea:focus {
+    height: auto; /* Expande conforme o conteúdo aumenta */
+}
+
 .container {
     width: 90%;
     max-width: 600px;
@@ -36,19 +57,7 @@ h1, h2 {
     border-radius: 5px;
     color: #00ffcc;
     margin-top: 1rem;
-    text-align: left;
-}
-
-input {
-    width: 100%;
-    max-width: 100%;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #00ffcc;
-    background-color: #222;
-    color: #00ff00;
+    white-space: pre-wrap; /* Permite quebra de linha automática */
 }
 
 button {
