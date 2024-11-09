@@ -106,3 +106,32 @@ button:hover {
 .progress-level.filled {
     background-color: #00ffcc;
 }
+
+/* Estilos para o balão de explicação */
+#explanation-cloud {
+    background-color: #222;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #00ffcc;
+    margin-top: 1rem;
+    position: relative;
+    max-width: 400px;
+    width: 80%;
+}
+
+/* Ocultar explicação inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Animação para exibir a explicação */
+#explanation-cloud {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
