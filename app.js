@@ -80,14 +80,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const explanations = {
-    "class": "Você digitou 'class'...",
-    "Queue": "Você nomeou a classe como 'Queue'...",
-    "constructor": "Você digitou 'constructor'...",
-    "this": "A palavra-chave 'this' refere-se...",
-    "first": "'first' é uma propriedade...",
-    "last": "'last' é uma propriedade...",
-    "size": "'size' é uma propriedade usada...",
-    "null": "'null' significa que a propriedade não..."
+     ";": "Você digitou ';' o ponto e virgula no final de uma instrução serve como um sinal para eu entender que uma instrução chegou ao fim e a próxima pode começar.",
+    "{}": "Esses { } são um conjunto de chaves. Elas me dizem onde o código da Queue começa e termina. Tudo que está entre { } vai pertencer à class Queue e definirá o que ela faz.",
+    "()": "Esses parênteses () me dizem que o constructor pode receber informações ou configurações. Aqui, você não colocou nada, então entendo que nenhuma informação extra é necessária para criar uma Queue.",
+    "class": "Você digitou 'class'. Quando vejo essa palavra, entendo que você está definindo um novo tipo de coisa ou objeto. Uma class é como um plano para criar várias cópias de algo com as mesmas características e comportamentos. Aqui, você está me dizendo para criar uma estrutura de Queue (Fila) com características e funcionalidades específicas.",
+    "Queue": "Você nomeou a classe como 'Queue'. Entendo que você quer que essa classe represente uma Fila. Isso significa que vamos criar um tipo especial de objeto onde os itens entram e saem em uma ordem específica, como pessoas numa fila.",
+    "constructor": "Você digitou 'constructor'. Isso é uma função especial que me diz o que fazer quando alguém cria uma nova Queue. É como uma receita inicial para configurar o objeto Queue do jeito certo toda vez que for criado.",
+    "this": "A palavra-chave 'this' refere-se a este objeto específico. No caso, refere-se ao próprio objeto Queue que estamos construindo. Toda vez que você escreve this, sei que estamos falando do Queue que está sendo criado.",
+    "this.first": "'this.first' me diz que estamos criando uma propriedade chamada first dentro do objeto Queue. Esta será a primeira coisa ou pessoa na fila, o primeiro elemento que entrou.",
+    "this.first = null": "Você definiu 'this.first = null'. Isso significa que, ao criar a fila, first ainda está vazio ou não tem valor. Estou deixando esse espaço pronto para ser preenchido mais tarde com o primeiro item que for adicionado à fila.",
+    "this.last": "'this.last' me diz que estamos criando outra propriedade, chamada last, que representará o último elemento na fila. Ele vai receber um valor assim que alguém ou algo entrar na fila.",
+    "this.last = null": "'this.last = null' Isso indica que, por enquanto, não há ninguém ou nada no final da fila. Isso será atualizado quando começarmos a adicionar itens.",
+    "this.size": "Você criou 'this.size'. Aqui, estamos definindo uma propriedade para acompanhar o tamanho da fila, ou quantos itens estão dentro dela. É uma forma de contar quantas coisas estão na fila a qualquer momento.",
+    "this.size = 0": "Você colocou 'this.size = 0'. Com isso, sei que estamos começando a fila do zero. Esse número vai aumentar quando adicionarmos novos itens e diminuir quando removermos algum."
 };
 
 const explanationCloud = document.getElementById("explanation-cloud");
