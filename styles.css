@@ -80,26 +80,27 @@ button:hover {
     font-weight: bold;
 }
 
-/* Estilos para a barra de progresso */
+/* Barra de Progresso */
 .progress-bar {
-    position: fixed; /* Fixa na lateral */
-    top: 10%; /* Posiciona um pouco abaixo do topo */
-    right: 10px; /* Fixa à direita da tela */
+    position: fixed;
+    top: 10%;
+    right: 10px;
     width: 40px;
-    height: 250px; /* Metade da altura original */
     border: 2px solid #00ffcc;
     border-radius: 10px;
     background-color: #1c1c1c;
     margin-top: 2rem;
-    z-index: 1000; /* Garante que ficará sobre outros elementos */
 }
 
 .progress-level {
     width: 100%;
-    height: 15px; /* Cada subnível da barra será mais fino */
+    height: 30px;
     border-bottom: 1px solid #00ffcc;
     background-color: #121212;
-    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress-level.filled {
