@@ -29,3 +29,9 @@ Thumbs.db
 
 # Temporary files
 *.swp
+
+# Software Documentation
+SoftwareDocumentation.md
+
+# git commands to tree project
+find . -type d \( -name 'node_modules' -o -name 'dist' -o -name 'build' -o -name '*.cache' -o -name '*.tmp' -o -name '*.git' \) -prune -o -print 
