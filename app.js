@@ -76,11 +76,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 "this": "The 'this' keyword refers to this specific object. In this case, it refers to the Queue object itself.",
                 ".":"When you type a '.' after a word, you are asking to access something that belongs to what came before the dot, like an attribute or a function.",
                 "this.first": "'this.first' tells me we're creating a property called first inside the Queue object.",
-                "this.first = null": "You have set 'this.first = null'. This means that when you create the queue, first is still empty or has no value.",
+                "=": "When you type '=', you are telling me to take the value to the right of the '=' and store it in the variable or property to the left of the '='.",
+                "===":"When you type '===', I understand that it is to compare the two values ​​and verify that they are exactly the same, including the data type.",
+                "++":"When you type '++' after a word, you are telling me to take the current value of that variable, add 1 to it, and update the variable with the new value. Now that variable is equal to the next number larger integer. For example: if the variable had the value '1', variable++ will be '2'.",
+                "--":"When you type '--' after a word, you are telling me to take the current value of that variable, subtract 1 from it, and update the variable with the new value. Now that variable is equal to the next number smaller integer. For example: if the variable had the value '2', variable-- will be '1'.",                "this.first = null": "You have set 'this.first = null'. This means that when you create the queue, first is still empty or has no value.",
                 "this.last": "'this.last' tells me we're creating another property called last that will represent the last element in the queue.",
                 "this.last = null": "'this.last = null' This indicates that, for now, there is no one or nothing at the end of the queue.",
                 "this.size": "You created 'this.size'. Here, we're defining a property to track the queue's size.",
-                "this.size = 0": "You put 'this.size = 0'. With this I know we are starting the queue from scratch."
+                "this.size = 0": "You put 'this.size = 0'. With this I know we are starting the queue from scratch.",
+                "if":"When you type 'if' I understand that it is to check 'if' what is between the parentheses '( )' is true, I must execute what is inside the braces '{ }'.",
+                "else":"When you type 'else' I understand that it is to check 'if' the 'if' condition was false, I must execute what is inside the braces '{ }' of the block immediately following.",
+                "return":"When you type 'return', I understand that it is to stop execution of the function immediately and return the specified value to the point where the function was called, in this case, at this point.",
+                "const":"When you type 'const', I understand that it is to create a 'constant' variable that cannot be reassigned, but within objects or arrays, their internal values ​​can still be modified.",
+                "isEmpty or empty":"When you type 'isEmpty' or 'empty', I understand that it is to check whether the structure (such as a string, array or list) is empty, that is, without content or elements.",
+                "= new":"When you type 'new after =', I understand that it is to create a new instance or object based on what comes after 'new'."
             }
         },
         pt: {
@@ -152,11 +161,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 "this": "A palavra-chave 'this' refere-se a este objeto específico. No caso, refere-se ao próprio objeto Queue.",
                 ".":"Quando você digita um '.' depois de uma palavra, você está pedindo para acessar algo que pertence àquilo que veio antes do ponto, como um atributo ou uma função.",
                 "this.first": "'this.first' me diz que estamos criando uma propriedade chamada first dentro do objeto Queue.",
+                "=": "Quando você digita '=', você está me dizendo para pegar o valor à direita do '=' e guardá-lo na variável ou propriedade à esquerda do '='.",
+                "===":"Quando você digita '===', eu entendo que é para comparar os dois valores e verificar se eles são exatamente iguais, incluindo o tipo de dado.",
+                "++":"Quando você digita '++' após uma palavra, está me dizendo para pegar o valor atual dessa variável, adicionar 1 a ela e atualizar a variável com o novo valor. Agora, essa variável é igual ao próximo número inteiro maior. Por exemplo: se a variável tinha o valor '1', variavel++ será '2'.",
+                "--":"Quando você digita '--' após uma palavra, está me dizendo para pegar o valor atual dessa variável, subtrair 1 a ela e atualizar a variável com o novo valor. Agora, essa variável é igual ao próximo número inteiro menor. Por exemplo: se a variável tinha o valor '2', variavel-- será '1'.",
                 "this.first = null": "Você definiu 'this.first = null'. Isso significa que, ao criar a fila, first ainda está vazio ou não tem valor.",
                 "this.last": "'this.last' me diz que estamos criando outra propriedade, chamada last, que representará o último elemento na fila.",
                 "this.last = null": "'this.last = null' Isso indica que, por enquanto, não há ninguém ou nada no final da fila.",
                 "this.size": "Você criou 'this.size'. Aqui, estamos definindo uma propriedade para acompanhar o tamanho da fila.",
-                "this.size = 0": "Você colocou 'this.size = 0'. Com isso, sei que estamos começando a fila do zero."
+                "this.size = 0": "Você colocou 'this.size = 0'. Com isso, sei que estamos começando a fila do zero.",
+                "if":"Quando você digita 'if' eu entendo que é para verificar 'se' o que está entre os parênteses '( )' for verdadeiro, eu devo executar o que está dentro das chaves '{ }'.",
+                "else":"Quando você digita 'else' eu entendo que é para verificar 'se' a condição do 'if' foi falsa, eu devo executar o que está dentro das chaves '{ }' do bloco imediatamente a seguir.",
+                "return":"Quando você digita 'return', eu entendo que é para parar a execução da função imediatamente e devolver o valor especificado para o ponto onde a função foi chamada, no caso, neste ponto.",
+                "const":"Quando você digita 'const', eu entendo que é para criar uma variável 'constante' que não pode ser reatribuída, mas dentro de objetos ou arrays, seus valores internos ainda podem ser modificados.",
+                "isEmpty ou empty":"Quando você digita 'isEmpty' ou 'empty', eu entendo que é para verificar se a estrutura (como uma string, array ou lista) está vazia, ou seja, sem conteúdo ou elementos.",
+                "= new":"Quando você digita 'new depos de =', eu entendo que é para criar uma nova instância ou objeto com base no que vem depois de 'new'."
+
             }
         }
     };
