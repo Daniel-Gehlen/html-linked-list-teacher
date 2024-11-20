@@ -1,0 +1,21 @@
+project-root/
+│
+├── v1/                     # Versão atual (JavaScript)
+│   ├── index.html
+│   ├── app.js
+│   └── styles.css
+│
+├── v2/                     # Nova versão com múltiplas linguagens
+│   ├── index.html
+│   ├── styles.css
+│   ├── js/
+│   │   ├── app.js         # Lógica principal da aplicação
+│   │   ├── program-languages.js   # Configurações das linguagens
+│   │   └── validators-code.js  # Validadores específicos para cada linguagem
+│   │   └── ui-texts.js  # Validadores específicos para cada linguagem
+│   └── implementations/   # Implementações em diferentes linguagens
+       ├── javascript.js # implementado mas temos que refatorar porque não é o código real e sim o código referente a UI para o usuario que escolher a linguagem, assim como as abaixo serão.
+       ├── typescript.js       
+       ├── python.js
+       ├── java.js
+       └── Ruby.js
