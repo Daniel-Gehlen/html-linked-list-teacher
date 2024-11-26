@@ -1,4 +1,3 @@
-// main.js
 import { texts } from './ui-texts.js';
 import languageImplementations from './program-languages-config.js';
 import validators from './validators-code.js';
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             selector.appendChild(option);
         });
         selector.value = currentProgrammingLanguage;
+        selector.selectedIndex = 0; // Ensure JavaScript is the first option
     }
 
     function setupLevelProgress() {
@@ -197,8 +197,23 @@ document.addEventListener('DOMContentLoaded', function () {
         selector.addEventListener('change', () => {
             currentProgrammingLanguage = selector.value;
             localStorage.setItem('currentProgrammingLanguage', currentProgrammingLanguage);
-            // Adicione aqui o código para atualizar o restante da interface, se necessário.
+            updateProgrammingLanguageUI();
         });
+    }
+
+    function updateProgrammingLanguageUI() {
+        const currentLanguage = languageImplementations[currentProgrammingLanguage];
+        if (!currentLanguage) return;
+
+        // Update levels
+        for (let i = 1; i <= 6; i++) {
+            const level = currentLanguage.levels[i];
+            if (level) {
+                document.getElementById(`level-${i}-title`).textContent = level.title;
+                document.getElementById(`level-${i}-instructions`).textContent = level.instructions;
+                document.getElementById(`code-example-${i}`).textContent = level.code;
+            }
+        }
     }
     
 

@@ -21,12 +21,11 @@
         <p>Let’s Learn Queues!</p>
         <button id="reset-button">Reset Progress</button>
 
-
         <!-- Nível 1: Definir a classe Queue -->
         <div id="level-1" class="level">
             <h2 id="level-1-title">Level 1: Define the Queue class</h2>
             <p id="level-1-instructions">Type the following code:</p>
-            <pre id="code-example">class Queue { constructor() { this.first = null; this.last = null; this.size = 0; } }</pre>
+            <pre id="code-example-1">class Queue { constructor() { this.first = null; this.last = null; this.size = 0; } }</pre>
             <textarea id="code-input-1" placeholder="Type your code here"></textarea>
             <button id="submit-code-1">Submit Code</button>
             <div id="feedback-1"></div>
@@ -36,7 +35,7 @@
         <div id="level-2" class="level hidden">
             <h2 id="level-2-title">Level 2: Implement the enqueue method</h2>
             <p id="level-2-instructions">Define the <code>enqueue</code> method to add nodes to the end of the queue:</p>
-            <pre id="code-example">enqueue(value) { const newNode = { value: value, next: null }; if (this.isEmpty()) { this.first = newNode; this.last = newNode; } else { this.last.next = newNode; this.last = newNode; } this.size++; return this; }</pre>
+            <pre id="code-example-2">enqueue(value) { const newNode = { value: value, next: null }; if (this.isEmpty()) { this.first = newNode; this.last = newNode; } else { this.last.next = newNode; this.last = newNode; } this.size++; return this; }</pre>
             <textarea id="code-input-2" placeholder="Type your code here"></textarea>
             <button id="submit-code-2">Submit Code</button>
             <div id="feedback-2"></div>
@@ -46,7 +45,7 @@
         <div id="level-3" class="level hidden">
             <h2 id="level-3-title">Level 3: Implement the dequeue method</h2>
             <p id="level-3-instructions">Define the <code>dequeue</code> method to remove nodes from the front of the queue:</p>
-            <pre id="code-example">dequeue() { if (this.isEmpty()) return null; const removedNode = this.first; this.first = this.first.next; if (this.first === null) { this.last = null; } this.size--; return removedNode.value; }</pre>
+            <pre id="code-example-3">dequeue() { if (this.isEmpty()) return null; const removedNode = this.first; this.first = this.first.next; if (this.first === null) { this.last = null; } this.size--; return removedNode.value; }</pre>
             <textarea id="code-input-3" placeholder="Type your code here"></textarea>
             <button id="submit-code-3">Submit Code</button>
             <div id="feedback-3"></div>
@@ -56,7 +55,7 @@
         <div id="level-4" class="level hidden">
             <h2 id="level-4-title">Level 4: Implement the isEmpty method</h2>
             <p id="level-4-instructions">Define the <code>isEmpty</code> method to check if the queue is empty:</p>
-            <pre id="code-example">isEmpty() { return this.size === 0; }</pre>
+            <pre id="code-example-4">isEmpty() { return this.size === 0; }</pre>
             <textarea id="code-input-4" placeholder="Type your code here"></textarea>
             <button id="submit-code-4">Submit Code</button>
             <div id="feedback-4"></div>
@@ -66,7 +65,7 @@
         <div id="level-5" class="level hidden">
             <h2 id="level-5-title">Level 5: Test enqueue by adding values to the queue</h2>
             <p id="level-5-instructions">Try adding values to the queue with <code>enqueue</code>:</p>
-            <pre id="code-example">const fila = new Queue(); fila.enqueue(10); fila.enqueue(20); fila.enqueue(30);</pre>
+            <pre id="code-example-5">const fila = new Queue(); fila.enqueue(10); fila.enqueue(20); fila.enqueue(30);</pre>
             <textarea id="code-input-5" placeholder="Type your code here"></textarea>
             <button id="submit-code-5">Submit Code</button>
             <div id="feedback-5"></div>
@@ -76,7 +75,7 @@
         <div id="level-6" class="level hidden">
             <h2 id="level-6-title">Level 6: Test dequeue to remove items from the queue</h2>
             <p id="level-6-instructions">Try removing values from the queue using <code>dequeue</code>:</p>
-            <pre id="code-example">fila.dequeue(); fila.dequeue();</pre>
+            <pre id="code-example-6">fila.dequeue(); fila.dequeue();</pre>
             <textarea id="code-input-6" placeholder="Type your code here"></textarea>
             <button id="submit-code-6">Submit Code</button>
             <div id="feedback-6"></div>
